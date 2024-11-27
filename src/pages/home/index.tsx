@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.scss";
 
 //IMAGES
 import banner from "../../assets/images/banner_cute-form.jpg";
 
 const HomePage: React.FC = () => {
+  const [email, setEmail] = useState<string>("");
+  const [isEmailValid, setIsEmailValid] = useState<boolean | null>(null);
+
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleEmailValidation = () => {
+    setIsEmailValid(validateEmail(email));
+
+    setTimeout(() => {
+      setIsEmailValid(null);
+    }, 5000);
+  };
+
   return (
     <div className="home-page">
       <section id="header">
@@ -37,9 +53,24 @@ const HomePage: React.FC = () => {
             id="email"
             placeholder="Informe o E-mail para consultar"
             required
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <button>Enviar</button>
+          <button onClick={handleEmailValidation}>Enviar</button>
         </div>
+        {isEmailValid !== null && (
+          <p
+            style={{
+              fontSize: "0.75rem",
+              color: isEmailValid ? "green" : "red",
+              marginTop: "8px",
+              fontWeight: "bold",
+            }}
+          >
+            {isEmailValid
+              ? "O e-mail está em um formato válido!"
+              : "O e-mail está em um formato inválido!"}
+          </p>
+        )}
       </section>
 
       <footer>
