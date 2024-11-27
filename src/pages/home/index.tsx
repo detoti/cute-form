@@ -18,13 +18,28 @@ const HomePage: React.FC = () => {
           Com a API ViaCep integrada podemos conferir rapidamente um endereço em
           todo Brasil!
         </p>
-
-        <input
-          type="text"
-          id="cep-number"
-          placeholder="Informe o CEP para consultar"
-          required
-        />
+        <div className="form">
+          <input
+            type="text"
+            id="cep-number"
+            placeholder="Informe o CEP para consultar"
+            required
+          />
+          <button>Enviar</button>
+        </div>
+        <p>Confira se um email tem formato válido</p>
+        <p className="description">
+          Avaliamos a formatação para conferir se o mesmo é válido!
+        </p>
+        <div className="form">
+          <input
+            type="text"
+            id="email"
+            placeholder="Informe o E-mail para consultar"
+            required
+          />
+          <button>Enviar</button>
+        </div>
       </section>
 
       <footer>

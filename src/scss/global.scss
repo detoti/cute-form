@@ -257,12 +257,30 @@ body {
         font-weight: 600;
     }
 
+    button {
+        border: none;
+        border-radius: 24px;
+        width: 100%;
+        background-color: var(--pink);
+        padding: 8px;
+        color: var(--white);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        outline: none;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     input[type="text"] {
-        border: 1px solid #ccc;
+        border: 1px solid var(--gray-light);
         border-radius: 24px;
         width: 100%;
         padding: 8px;
-        font-size: 16px;
+        font-size: 1rem;
         outline: none;
         transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
@@ -272,7 +290,7 @@ body {
         }
 
         &:hover {
-            border-color: #888;
+            border-color: var(--charcoal);
         }
 
         &::placeholder {

@@ -1,9 +1,17 @@
 .home-page {
-    #link-list,
-
-    #contact {
+    #link-list {
         margin: 0 auto;
         max-width: 600px;
+
+        .form {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+
+            button {
+                max-width: 150px;
+            }
+        }
     }
 
     .banner {
