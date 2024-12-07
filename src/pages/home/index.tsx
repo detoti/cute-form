@@ -124,8 +124,8 @@ const HomePage: React.FC = () => {
       <hr />
       <footer>
         <p className="disclaimer">
-          André Toti & Danielle Trajano | copyright © 2024 | All Rights Reserved
-          | Belas Artes - ADS
+          André Toti & Danielle Trajano & Thaiza Nascimento | copyright © 2024 |
+          All Rights Reserved | Belas Artes - ADS
         </p>
       </footer>
     </div>
